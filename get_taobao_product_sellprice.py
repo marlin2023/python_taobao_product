@@ -32,7 +32,7 @@ def get_taobao_product_sellprice(pid):
     scode = urllib.request.urlopen(req).read().decode('utf-8', 'ignore')
     price = re.findall(r'(?:price\W*)(\d*\.\d*)', scode)
     print(
-           '原价:', ###原价不是从这里获取的，淘宝和天猫这里还是有区别的，淘宝完全可以从原始页面获取。
+           '原价:', ###原价不是从这里获取的，淘宝和天猫这里还是有区别的，淘宝完全可以从原始页面获取。tb-rmb-num 。
            price[1],
            '促销价:',
            price[0] 
